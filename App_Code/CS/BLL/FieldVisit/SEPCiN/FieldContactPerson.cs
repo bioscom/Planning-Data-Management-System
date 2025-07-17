@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-using System.Data.Common; using Oracle.ManagedDataAccess.Client;
+using System.Data.Common; 
+using Oracle.ManagedDataAccess.Client;
 
 /// <summary>
 /// Summary description for FieldContactPerson
