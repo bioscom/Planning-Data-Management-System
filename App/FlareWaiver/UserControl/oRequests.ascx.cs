@@ -122,11 +122,11 @@ public partial class UserControl_oRequests : aspnetUserControl
             oappUsersHelper.GetUsersByRoleId(ddlDeligate, appUserRolesFlrWaiver.userRole.AssuranceOnshore);
             grdView.DataSource = oFlareWaiverRequestHelper.dtGetRequestsFlareWaiverPendingMyApproval(oAppUser);
         }
-        else if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
-        {
-            oappUsersHelper.GetUsersByRoleId(ddlDeligate, appUserRolesFlrWaiver.userRole.AssuranceOffshore);
-            grdView.DataSource = oFlareWaiverRequestHelper.dtGetRequestsFlareWaiverPendingMyApproval(oAppUser);
-        }
+        //else if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
+        //{
+        //    oappUsersHelper.GetUsersByRoleId(ddlDeligate, appUserRolesFlrWaiver.userRole.AssuranceOffshore);
+        //    grdView.DataSource = oFlareWaiverRequestHelper.dtGetRequestsFlareWaiverPendingMyApproval(oAppUser);
+        //}
         else if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.Approval)
         {
             oappUsersHelper.GetUsersByRoleId(ddlDeligate, appUserRolesFlrWaiver.userRole.Approval);
@@ -210,11 +210,11 @@ public partial class UserControl_oRequests : aspnetUserControl
             oappUsersHelper.GetUsersByRoleId(ddlDeligate, appUserRolesFlrWaiver.userRole.AssuranceOnshore);
             (sender as RadGrid).DataSource = oFlareWaiverRequestHelper.dtGetRequestsFlareWaiverPendingMyApproval(oAppUser);
         }
-        else if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
-        {
-            oappUsersHelper.GetUsersByRoleId(ddlDeligate, appUserRolesFlrWaiver.userRole.AssuranceOffshore);
-            (sender as RadGrid).DataSource = oFlareWaiverRequestHelper.dtGetRequestsFlareWaiverPendingMyApproval(oAppUser);
-        }
+        //else if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
+        //{
+        //    oappUsersHelper.GetUsersByRoleId(ddlDeligate, appUserRolesFlrWaiver.userRole.AssuranceOffshore);
+        //    (sender as RadGrid).DataSource = oFlareWaiverRequestHelper.dtGetRequestsFlareWaiverPendingMyApproval(oAppUser);
+        //}
         else if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.Approval)
         {
             oappUsersHelper.GetUsersByRoleId(ddlDeligate, appUserRolesFlrWaiver.userRole.Approval);

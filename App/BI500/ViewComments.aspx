@@ -8,19 +8,17 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContentPlaceHolder" runat="Server">
-
-    <table>
-        <tr>
-            <td style="width: 450px">
+    <div class="col-md-12 mb-4">
+        <div class="row">
+            <div class="col-6">
                 <uc2:oRequestDetails ID="oRequestDetails1" runat="server" />
-            </td>
-            <td>
+            </div>
+            <div class="col-6">
                 <uc3:oApprovalComment ID="oApprovalCommentProjectChampion" runat="server" />
                 <uc3:oApprovalComment ID="oApprovalCommentBITeam" runat="server" />
                 <uc3:oApprovalComment ID="oApprovalCommentProjectSponsor" runat="server" />
-                <br />
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
 </asp:Content>
 

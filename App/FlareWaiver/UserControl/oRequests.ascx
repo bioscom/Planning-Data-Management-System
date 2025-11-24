@@ -6,10 +6,16 @@
         <div style="float: left">
             <asp:CheckBox ID="allCkb" runat="server" OnCheckedChanged="allCkb_CheckedChanged" Text="Select All" AutoPostBack="True" />
         </div>
-        <div style="float: left; margin-left: 1.5em">
-            <asp:DropDownList ID="ddlDeligate" runat="server" Width="350px">
+        <div class="me-3" style="float: left; margin-left: 1.5em">
+            <asp:DropDownList ID="ddlDeligate" CssClass="form-select searchable-select"
+                runat="server" Width="350px">
             </asp:DropDownList>
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="ddlDeligate" ErrorMessage="Please, select a deligate to whom Flare Waiver Requests are to be handed over" Type="Integer" ValidationGroup="handover" ValueToCompare="-1" Operator="NotEqual">*</asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" 
+                ControlToValidate="ddlDeligate" 
+                ErrorMessage="Please, select a deligate to whom Flare Waiver Requests are to be handed over" 
+                Type="Integer" ValidationGroup="handover" 
+                ValueToCompare="-1" Operator="NotEqual"
+                CssClass="text-danger">*</asp:CompareValidator>
         </div>
         <div style="float: left">
             <asp:Button ID="handOverButton" runat="server" OnClick="handOverButton_Click" Text="Handover Requests" ValidationGroup="handover" />
@@ -23,7 +29,7 @@
 <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
     <script type="text/javascript">
 
-        <%--function ShowActionForm(id, rowIndex) {
+        function ShowActionForm(id, rowIndex) {
             var grid = $find("<%= grdView.ClientID %>");
 
             var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
@@ -33,7 +39,7 @@
             wndw.set_visibleStatusbar(false);
             wndw.Center();
             return false;
-        }--%>
+        }
 
         function ShowComment(id, rowIndex) {
             var grid = $find("<%= grdView.ClientID %>");
@@ -142,7 +148,7 @@
        OnItemCreated="grdView_ItemCreated" OnItemCommand="grdView_ItemCommand" OnItemDataBound="grdView_ItemDataBound" OnNeedDataSource="grdView_NeedDataSource" 
         OnDetailTableDataBind="grdView_DetailTableDataBind" Width="100%">
 
-        <AlternatingItemStyle BackColor="#FFFF99" />
+        <AlternatingItemStyle BackColor="#CBF0CB" />
         <ItemStyle BackColor="#FFFFFF" />
 
         <PagerStyle PageSizes="20,50,100" PagerTextFormat="{4}<strong>{5}</strong> items matching your search criteria" PageSizeLabelText="Items per page:" />
@@ -277,3 +283,14 @@
 </div>
 
 <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False" ValidationGroup="handover" />
+
+
+<script>
+    $(document).ready(function () {
+        $('.searchable-select').select2({
+            width: '350px',
+            placeholder: "Select Delegation...",
+            allowClear: true
+        });
+    });
+</script>

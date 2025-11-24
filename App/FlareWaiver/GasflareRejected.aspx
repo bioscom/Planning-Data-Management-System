@@ -7,14 +7,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="headId" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <table class="tMainBorder" style="width: 100%">
-        <tr class="cHeadTile">
-            <td>Rejected Requests</td>
-        </tr>
-        <tr>
-            <td>
-                <uc1:oRequests ID="oRequestsRejected" runat="server" />
-            </td>
-        </tr>
-    </table>
+    <div class="card mb-4">
+        <div class="card-header">
+            Rejected Requests
+        </div>
+        <div class="card-body">
+            <uc1:oRequests ID="oRequestsRejected" runat="server" />
+        </div>
+    </div>
 </asp:Content>

@@ -7,17 +7,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="headId" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <table class="tMainBorder" style="width: 100%">
-        <tr class="cHeadTile">
-            <td>
-                <asp:Label ID="lblTitleApproved" runat="server"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <uc1:oRequests ID="oRequestsApproved" runat="server" />
-            </td>
-        </tr>
-    </table>
-</asp:Content>
 
+    <div class="card mb-4">
+        <div class="card-header">
+            <asp:Label ID="lblTitleApproved" runat="server"></asp:Label>
+        </div>
+        <div class="card-body">
+            <uc1:oRequests ID="oRequestsApproved" runat="server" />
+        </div>
+    </div>
+</asp:Content>

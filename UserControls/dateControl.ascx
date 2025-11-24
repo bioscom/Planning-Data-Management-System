@@ -3,12 +3,12 @@
 
 <div>
     <div style="float: left">
-        <asp:TextBox ID="txtDate" runat="server" BackColor="#CCCCCC" Width="100px"></asp:TextBox>
+        <asp:TextBox ID="txtDate" runat="server" BackColor="#CCCCCC"></asp:TextBox>
     </div>
 
     <div style="float: left">
         <asp:ImageButton ID="imgBtnStartDate" runat="server" ImageUrl="~/Images/Calendar_scheduleHS.png"
-            ValidationGroup="yyyy" Height="22px" />
+            ValidationGroup="yyyy" Height="40px" />
     </div>
 
     <ajaxToolkit:CalendarExtender ID="txtDateExt" runat="server" Enabled="True" EnableViewState="true"

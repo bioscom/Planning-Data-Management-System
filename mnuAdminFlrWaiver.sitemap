@@ -21,8 +21,8 @@
         <siteMapNode url="~/App/FlareWaiver/Reporting.aspx" title="Flare Request Performance"  description="" />
         <siteMapNode url="~/App/FlareWaiver/Reports/rptReport.aspx" title="Waiver Request Report"  description="" />
         <siteMapNode url="~/App/FlareWaiver/FlareTarget.aspx" title="Gas Flare Limit"  description="" />
-	<siteMapNode url="~/App/FlareWaiver/FlareAnalyDashBoard.aspx" title="Gas Flare Dashboard"  description="" />
-	<siteMapNode url="~/App/FlareWaiver/FlaringBeyondApproval.aspx" title="Flaring Beyond Approval"  description="" />
+	      <siteMapNode url="~/App/FlareWaiver/FlareAnalyDashBoard.aspx" title="Gas Flare Dashboard"  description="" />
+	      <siteMapNode url="~/App/FlareWaiver/FlaringBeyondApproval.aspx" title="Flaring Beyond Approval"  description="" />
         <!--<siteMapNode url="~/App/FlareWaiver/FlareTargetAnaly.aspx" title="Analyse Flare Target"  description="" /> -->
       </siteMapNode>
 

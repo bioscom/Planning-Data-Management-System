@@ -2,93 +2,112 @@
 
 <%@ Register Src="../App/BI500/UserControl/adminMenu.ascx" TagName="adminMenu" TagPrefix="uc2" %>
 <%@ Register Src="../UserControls/supportContact.ascx" TagName="supportContact" TagPrefix="uc3" %>
-
 <%@ Register src="../UserControls/LoggedOnStat.ascx" tagname="LoggedOnStat" tagprefix="uc4" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title>Bright Ideas</title>
+<head id="Head" runat="server">
+    <title>Ideas Garden</title>
     <asp:ContentPlaceHolder ID="headId" runat="server">
     </asp:ContentPlaceHolder>
-    <link href="../CSS/styles.css" type="text/css" rel="stylesheet" media="screen" />
-    <link href="../CSS/menuStyle.css" type="text/css" rel="stylesheet" />
+
+     <!-- Please, jQuery must be loaded first -->
+     <script language="javascript" type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+     <script language="javascript" type="text/javascript" src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+     <!-- Bootstrap 5 CSS -->
+     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+
+
+    <link href="../CSS/FlareWaiverStyles.css" type="text/css" rel="stylesheet" media="screen" />
+    <%--<link href="../CSS/menuStyle.css" type="text/css" rel="stylesheet" />--%>
     <link href="../CSS/navigationStyle.css" rel="stylesheet" type="text/css" />
 
     <script lang="javascript" type="text/javascript" src="../Script/fieldVisit.js"></script>
     <script lang="javascript" type="text/javascript" src="../Script/formValidator.js"></script>
 
+    <style>
+        /* Custom styling for TabPanel header */
+        .custom-tab-header {
+            display: flex;                /* flex allows easy vertical alignment */
+            align-items: center;          /* vertical centering */
+            justify-content: center;      /* horizontal centering (optional) */
+            height: 20px;                 /* ensure enough height for bigger text */
+            font-size: 0.6rem;            /* larger text */
+            font-weight: bold;            /* bold text */
+            text-align: center;           /* center text */
+            /*padding: 0 10px;               optional horizontal padding */
+            /*box-sizing: border-box;        ensures padding doesn't break layout */
+        }
+
+        /* Optional: adjust TabPanel header container if needed */
+        .ajax__tab_tab {
+            min-height: 20px;             /* match the height above */
+        }
+    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="container">
-            <div id="header">
-                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/ShellLogo.png" Style="z-index: 102; left: 5px; margin-top: 0.5em; position: absolute;" />
-                <div class="title" style="margin-left:7.5em; text-align:center">
-                    <asp:Label ID="lblWebSiteTitle" runat="server" ForeColor="Red" Font-Bold="True" Font-Size="X-Large"></asp:Label>
-                </div>
-                <div class="breadcrumb">
-                    Welcome
-                            <asp:Label ID="loggedinUserLabel" runat="server" ForeColor="Black"></asp:Label>&nbsp;|
-                            <asp:LinkButton ID="lnkHomePage" runat="server" PostBackUrl="~/App/BI500/MyBrightIdeas.aspx" ValidationGroup="MasterMaster">Home Page</asp:LinkButton>
-                    <br />
-                    <asp:Label ID="dateLabel" runat="server" Text="" ForeColor="Black"></asp:Label>
-                    &nbsp;| 
-                            <asp:HyperLink ID="logoutHyperLink" runat="server" NavigateUrl="~/Default.aspx">Logout</asp:HyperLink>
-                    <br />
-                    <asp:Label ID="loggedInLabel" runat="server" Text="Logged in as:" ForeColor="Red" Font-Bold="true"></asp:Label>&nbsp;
-                    <%--<asp:Label ID="lblRole" runat="server" Text="" ForeColor="Red" Font-Bold="true"></asp:Label>--%>
-                </div>
-            </div>
-            <div id="navigation">
-                <div class="firstChild">
-                    <uc4:LoggedOnStat ID="LoggedOnStat1" runat="server" />
-                </div>
-                <div class="child" style="vertical-align: top">
-                    <div style="float: left">
-                        <asp:Label ID="Label1" Font-Size="95%" runat="server" Text="Enter Request No:"></asp:Label>
+        <div id="container-fluid"> 
+            <!-- HEADER -->
+            <div class="col-md-12 mb-2">
+                <div class="row">
+                    <div class="col-md-2"> 
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/LOGO.png" Style="z-index: 102; width:150px; left: 5px; position: absolute;" />
+                    </div> 
+                    <div class="title col-md-6">
+                        <asp:Label ID="lblWebSiteTitle" runat="server"></asp:Label>
                     </div>
-                    <div style="float: left">
-                        <asp:TextBox ID="txtFlarewaiverNum" runat="server" ToolTip="Enter Flare waiver request number" Width="200px"></asp:TextBox>
-                    </div>
-                    <div style="float: left">
-                        <asp:ImageButton ID="searchButton" runat="server" ImageUrl="~/Images/gosearch.gif" OnClick="searchButton_Click" />
-                    </div>
-                </div>
-            </div>
-            <div id="navigation1">
-            </div>
-            <div id="navigation2">
-            </div>
-            <div id="navigation3">
-                <div class="xFChild">
-                    <asp:SiteMapPath ID="SiteMapPath1" runat="server">
-                    </asp:SiteMapPath>
-                </div>
-                <div class="xChild">
-                    <a id="dpeBackLink" href="javascript:history.back()">
-                        <asp:ImageButton ID="ImageButton2" runat="server" Style="border: 0" ImageUrl="~/Images/bullet_back.gif" />Back</a>
-                </div>
-            </div>
-
-            <div id="master_content">
-                <div class="master_contentplaceholder_SideMenu">
-                    <asp:ContentPlaceHolder ID="MenuContentContentPlaceHolder" runat="server">
-                        <uc2:adminMenu ID="adminMenu1" runat="server" />
+                    <div class="col-md-4">
+                        Welcome
+                                <asp:Label ID="loggedinUserLabel" runat="server" ForeColor="Black"></asp:Label>&nbsp;|
+                                <asp:LinkButton ID="lnkHomePage" runat="server" PostBackUrl="~/App/BI500/MyBrightIdeas.aspx" ValidationGroup="MasterMaster">Home Page</asp:LinkButton>
                         <br />
-                        <uc3:supportContact ID="supportContact1" runat="server" />
-                    </asp:ContentPlaceHolder>
+                        <asp:Label ID="dateLabel" runat="server" Text="" ForeColor="Black"></asp:Label>
+                        &nbsp;| 
+                                <asp:HyperLink ID="logoutHyperLink" runat="server" NavigateUrl="~/Default.aspx">Logout</asp:HyperLink>
+                        <br />
+                        <asp:Label ID="loggedInLabel" runat="server" Text="Logged in as:" ForeColor="Red" Font-Bold="true"></asp:Label>&nbsp;
+                        <%--<asp:Label ID="lblRole" runat="server" Text="" ForeColor="Red" Font-Bold="true"></asp:Label>--%>
+                    </div>
                 </div>
-                <div class="master_contentplaceholder">
+                <!-- Navigation -->
+                <div id="navigation"  class="d-flex justify-content-end align-items-center mt-1 gap-1">
+                    <asp:Label ID="Label1" runat="server" ForeColor="Black" Text="Enter Request No:"></asp:Label>
+                    <asp:TextBox ID="txtFlarewaiverNum" runat="server" ToolTip="Enter Flare waiver request number" CssClass="form-control" Style="width: 300px; height:30px"></asp:TextBox>  
+                    <asp:ImageButton ID="searchButton" runat="server" ImageUrl="~/Images/gosearch.gif" OnClick="searchButton_Click" />
+                </div>
+                <div id="navigation1"></div>
+                <div id="navigation2"></div>
+            </div>
+            <!-- CONTENT AREA -->
+            <div id="page-wrapper">
+
+                <!-- Sidebar (Fixed Left) -->
+                <div id="sidebar">
+                    <uc2:adminMenu ID="adminMenu1" runat="server" />
+                </div>
+
+                <!-- Main Content (Scrollable) -->
+                <div id="content-area">
                     <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
+
             </div>
+        
+            <div class="row">
+                <div class="col-12 footer mt-4">
+                    <div id="footer">
+                        <span style="float: left; vertical-align: top">Renaissance Ideas Garden</span>
+                        <span style="float: right; vertical-align: top">Copyright © 2025 Business Transformation</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div id="footer">
-            <span style="float: left; vertical-align: top">SCiN Bright Ideas</span>
-            <span style="float: right; vertical-align: top">Copyright © 2014-2016 Competitiveness and Business Improvement</span>
-        </div>
+
     </form>
 </body>
 </html>

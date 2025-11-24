@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 // Use the `FusionCharts.Charts` namespace to be able to use classes and methods required to // create charts.
-using FusionCharts.Charts;
+//using FusionCharts.Charts;
 
 public partial class App_BI500_UserControl_GraphicalReports : System.Web.UI.UserControl
 {
@@ -53,10 +53,10 @@ public partial class App_BI500_UserControl_GraphicalReports : System.Web.UI.User
         strXML += "</chart>";
 
         // Initialize the chart.
-        Chart factoryOutput = new Chart("column2d", "ByFunction", "800", "500", "xml", strXML);
+        //Chart factoryOutput = new Chart("column2d", "ByFunction", "800", "500", "xml", strXML);
 
         // Render the chart.
-        FCLiteral.Text = factoryOutput.Render();
+        //FCLiteral.Text = factoryOutput.Render();
     }
 
     public void GraphicalReportByYearDepartment(int iYear, int iDepartmentId, int iFunction)
@@ -88,11 +88,11 @@ public partial class App_BI500_UserControl_GraphicalReports : System.Web.UI.User
         strXML += "</chart>";
 
         // Initialize the chart.
-        Chart factoryOutput = new Chart("column2d", "ByDepartment", "800", "500", "xml", strXML);
+        //Chart factoryOutput = new Chart("column2d", "ByDepartment", "800", "500", "xml", strXML);
         //msline //stackedcolumn2d  //column2d //msstackedcolumn2d
 
         // Render the chart.
-        FCLiteral.Text = factoryOutput.Render();
+        //FCLiteral.Text = factoryOutput.Render();
     }
 
 
@@ -129,10 +129,10 @@ public partial class App_BI500_UserControl_GraphicalReports : System.Web.UI.User
         strXML += "</chart>";
 
         // Initialize the chart.
-        Chart factoryOutput = new Chart("column2d", "ByFunction", "800", "500", "xml", strXML);
+        //Chart factoryOutput = new Chart("column2d", "ByFunction", "800", "500", "xml", strXML);
 
         // Render the chart.
-        FCLiteral.Text = factoryOutput.Render();
+        //FCLiteral.Text = factoryOutput.Render();
     }
 
     public void GraphicalReportByMonthDepartment(int iMonth, int iYear, int iDepartmentId, int iFunction)
@@ -164,11 +164,11 @@ public partial class App_BI500_UserControl_GraphicalReports : System.Web.UI.User
         strXML += "</chart>";
 
         // Initialize the chart.
-        Chart factoryOutput = new Chart("column2d", "ByDepartment", "800", "500", "xml", strXML);
+        //Chart factoryOutput = new Chart("column2d", "ByDepartment", "800", "500", "xml", strXML);
         //msline //stackedcolumn2d  //column2d //msstackedcolumn2d
 
         // Render the chart.
-        FCLiteral.Text = factoryOutput.Render();
+        //FCLiteral.Text = factoryOutput.Render();
     }
 
 
@@ -206,10 +206,10 @@ public partial class App_BI500_UserControl_GraphicalReports : System.Web.UI.User
         strXML += "</chart>";
 
         // Initialize the chart.
-        Chart factoryOutput = new Chart("column2d", "ByFunctionWeek", "800", "500", "xml", strXML);
+        //Chart factoryOutput = new Chart("column2d", "ByFunctionWeek", "800", "500", "xml", strXML);
 
         // Render the chart.
-        FCLiteral.Text = factoryOutput.Render();
+        //FCLiteral.Text = factoryOutput.Render();
     }
 
     public void GraphicalReportByWeekDepartment(int iWeek, int iYear, int iDepartmentId, int iFunction)
@@ -241,10 +241,10 @@ public partial class App_BI500_UserControl_GraphicalReports : System.Web.UI.User
         strXML += "</chart>";
 
         // Initialize the chart.
-        Chart factoryOutput = new Chart("column2d", "ByDepartmentWeek", "800", "500", "xml", strXML);
+        //Chart factoryOutput = new Chart("column2d", "ByDepartmentWeek", "800", "500", "xml", strXML);
         //msline //stackedcolumn2d  //column2d //msstackedcolumn2d
 
         // Render the chart.
-        FCLiteral.Text = factoryOutput.Render();
+        //FCLiteral.Text = factoryOutput.Render();
     }
 }

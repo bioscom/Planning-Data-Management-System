@@ -7,59 +7,57 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" runat="Server">
     <ajaxToolkit:ToolkitScriptManager runat="Server" ID="ScriptManager1" />
-    <table>
-        <tr>
-            <td style="width:50%">
+
+
+    <div class="col-12 mb-4">
+        <div class="row"> 
+            <div class="col-6">
                 <uc1:oRequestDetails ID="oRequestDetails1" runat="server" />
-            </td>
-            <td>
-                <table class="tMainBorder">
-                    <tr>
-                        <td class="cHeadTile" colspan="2">
-                            <asp:Label ID="approverLabel" runat="server" Font-Bold="True"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="Stand"></asp:Label>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rdbSupport" ErrorMessage="Your stand is required">*</asp:RequiredFieldValidator>
-                        </td>
-                        <td>
-                            <asp:RadioButtonList ID="rdbSupport" runat="server" RepeatDirection="Horizontal">
-                            </asp:RadioButtonList>
-                        </td>
-                    </tr>
-                </table>
-                <table class="tMainBorder">
-                    <tr>
-                        <td class="cHeadTile">
-                            <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Add comments here"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="txtComment" runat="server" Height="100px" Text=""
-                                TextMode="MultiLine" Width="99%"></asp:TextBox>
-                        </td>
-                    </tr>
+            </div>
 
-                    <tr>
-                        <td>
-                            <div style="float: right">
-                                <asp:Button ID="submitBtn" runat="server" OnClick="submitBtn_Click"
-                                    Text="Submit" Width="100px" />
+            <div class="col-6">
+                <div class="card mb-1">
+                    <div class="card-header">
+                        <asp:Label ID="lblApproverRole" runat="server"></asp:Label>
+                    </div>
+                    <div class="card-body">
 
-                                &nbsp;<asp:Button ID="closeButton" runat="server" OnClick="closeButton_Click"
-                                    Text="Close" ValidationGroup="close" Width="100px" />
+                    </div>
+                </div>
+
+                <div class="card mb-1">
+                    <div class="card-header">
+                        <asp:Label ID="approverLabel" runat="server" Font-Bold="True"></asp:Label>
+                    </div>
+                    <div class="card-body">
+                        <div class="row ms-2">
+                            <div class="col-3">
+                                <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="Stand"></asp:Label>
                             </div>
-                            <asp:ValidationSummary ID="ValidationSummary2" runat="server" ShowMessageBox="True" ShowSummary="False" />
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-    <br />
+                            <div class="col-8">
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rdbSupport" ErrorMessage="Your stand is required">*</asp:RequiredFieldValidator>
+                                <asp:RadioButtonList ID="rdbSupport" runat="server" RepeatDirection="Horizontal"></asp:RadioButtonList>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        
+                <div class="card">
+                    <div class="card-header">
+                        <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Add comments here"></asp:Label>
+                    </div>
+                    <div class="card-body">
+                        <asp:TextBox ID="txtComment" runat="server" Height="100px" Text="" TextMode="MultiLine"></asp:TextBox>
+                    </div>
+                    <div class="card-footer">
+                        <asp:Button ID="submitBtn" runat="server" OnClick="submitBtn_Click" Text="Submit" />
+                        <asp:Button ID="closeButton" runat="server" OnClick="closeButton_Click" Text="Close" ValidationGroup="close" />
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+    <asp:ValidationSummary ID="ValidationSummary2" runat="server" ShowMessageBox="True" ShowSummary="False" />
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False" />
 </asp:Content>
 

@@ -100,13 +100,13 @@
 
 #navigation1 {
 	top: 6em;
-	float:left;
+	float: left;
 	/*border-left:solid 1px gray;
     border-right:solid 1px gray;
 	border-top:solid 1px gray;*/
-	background-color:gold;
-	width:100%;
-	height:25px;
+	background-color: #39e90e;
+	width: 100%;
+	height: 25px;
 	/*background: url('../images/bg_p1.gif') repeat-x left top;*/
 }
 

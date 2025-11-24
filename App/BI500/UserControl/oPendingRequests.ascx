@@ -1,15 +1,14 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="oPendingRequests.ascx.cs" Inherits="UserControl_oPendingRequests" %>
 
-<asp:DropDownList ID="ddlYear" runat="server" Width="200px" AutoPostBack="True" OnSelectedIndexChanged="ddlYear_SelectedIndexChanged">
+<asp:DropDownList ID="ddlYear" runat="server" Width="200px" CssClass="form-control form-control-sm" AutoPostBack="True" OnSelectedIndexChanged="ddlYear_SelectedIndexChanged">
     <asp:ListItem Value="-1">Select Year...</asp:ListItem>
-</asp:DropDownList>
-<br />
-<br />
+</asp:DropDownList><hr />
+
 <asp:GridView ID="grdGridView" runat="server" AllowPaging="True"
     AutoGenerateColumns="False" OnLoad="grdGridView_Load"
     OnPageIndexChanging="grdGridView_PageIndexChanging"
     OnRowCommand="grdGridView_RowCommand"
-    OnSelectedIndexChanged="grdGridView_SelectedIndexChanged" PageSize="20"
+    OnSelectedIndexChanged="grdGridView_SelectedIndexChanged" PageSize="50"
     Width="100%">
     <Columns>
 

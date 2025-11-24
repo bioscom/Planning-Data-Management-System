@@ -7,7 +7,28 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="headId" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <table class="tMainBorder" style="width: 100%">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Title Section -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <asp:Label ID="lblTitle" runat="server"></asp:Label>
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="card-body">
+                        <uc1:oRequests ID="oRequestsPending" runat="server" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <%--<table class="tMainBorder" style="width: 100%">
         <tr class="cHeadTile">
             <td>
                 <asp:Label ID="lblTitle" runat="server"></asp:Label>
@@ -18,6 +39,6 @@
                 <uc1:oRequests ID="oRequestsPending" runat="server" />
             </td>
         </tr>
-    </table>
+    </table>--%>
 </asp:Content>
 

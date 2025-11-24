@@ -647,7 +647,7 @@ public partial class UserManagement : aspnetPage
             else if (item.Cells[8].Text == ((int) appUserRolesFlrWaiver.userRole.Initiator).ToString()) item.Cells[8].Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.Initiator);
             else if (item.Cells[8].Text == ((int) appUserRolesFlrWaiver.userRole.LineManager).ToString()) item.Cells[8].Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.LineManager);
             else if (item.Cells[8].Text == ((int) appUserRolesFlrWaiver.userRole.AssurancePSMgr).ToString()) item.Cells[8].Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssurancePSMgr);
-            else if (item.Cells[8].Text == ((int) appUserRolesFlrWaiver.userRole.AssuranceOffshore).ToString()) item.Cells[8].Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssuranceOffshore);
+            //else if (item.Cells[8].Text == ((int) appUserRolesFlrWaiver.userRole.AssuranceOffshore).ToString()) item.Cells[8].Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssuranceOffshore);
             else if (item.Cells[8].Text == ((int) appUserRolesFlrWaiver.userRole.AssuranceOnshore).ToString()) item.Cells[8].Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssuranceOnshore);
 
             //Initiatives Management

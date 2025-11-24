@@ -64,8 +64,8 @@ public partial class App_FlareWaiver_ViolationMailList : System.Web.UI.Page
                 userRole.Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.LineManager);
             else if (int.Parse(userRole.Text) == (int)appUserRolesFlrWaiver.userRole.AssurancePSMgr)
                 userRole.Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssurancePSMgr);
-            else if (int.Parse(userRole.Text) == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
-                userRole.Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssuranceOffshore);
+            //else if (int.Parse(userRole.Text) == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
+            //    userRole.Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssuranceOffshore);
             //else if (int.Parse(userRole.Text) == (int)appUserRolesFlrWaiver.userRole.GMOnshore)
             //    userRole.Text = appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.GMOnshore);
             //else if (int.Parse(userRole.Text) == (int)appUserRolesFlrWaiver.userRole.GMDeepWater)

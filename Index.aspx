@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>Business Improvement and Production Excellence</title>
+    <title>Ideas Garden</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -46,9 +46,9 @@
         }
 
         .jumbotron {
-            background-color: #D42E12;
+            background-color: #28A745;
             color: #fff;
-            padding: 50px 25px;
+            padding: 50px 5px;
         }
 
         .container-fluid {
@@ -275,11 +275,14 @@
                             <li><a href="App/FLBM/Default.aspx">Front Line Barrier Management</a></li>
                         </ul>
                     </li>
-                    <li><a href="App/FLBM/Default.aspx">Front Line Barrier Management</a></li>
-                    <li><a href="AppGatePass.aspx?sAppToken=pr">Cost Red Flag</a></li>
-                    <li><a href="AppGatePass.aspx?sAppToken=flr">Weekly Highlights</a></li>
-                    <li><a href="https://nga001-sp.shell.com/sites/AFFAA0125/default.aspx">Our Sharepoint Site</a></li>
-                    <li><a href="http://sww.scin.shell.com/ep/epg/sepcin/production/OperationalExcellenceIntegrity.html"><b style="color: red">Operations Integrity/ESP</b></a></li>
+                    
+                    
+                    <li><a href="https://renaissance.workvivo.com/spaces/88374/pages">Our Workvivo Space</a></li>
+                    <%--<li><li><a href="AppGatePass.aspx?sAppToken=flr">Weekly Highlights</a></li>
+                        <li><a href="App/FLBM/Default.aspx">Front Line Barrier Management</a></li>
+                        <li><a href="AppGatePass.aspx?sAppToken=pr">Cost Red Flag</a></li>
+                        <a href="http://sww.scin.shell.com/ep/epg/sepcin/production/OperationalExcellenceIntegrity.html"><b style="color: red">Operations Integrity/ESP</b></a></li>
+                    --%>
                 </ul>
             </div>
         </div>
@@ -287,10 +290,12 @@
 
     <div class="jumbotron">
         <a class="navbar-brand" href="#myPage">
-            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/p_ShellLogo64.gif" Style="float: left" />
+            <div style=" background: white; padding: 8px 12px; border-radius: 6px; display: inline-block;">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/LOGO.png" Width="150px" Style="float: left" />
+            </div>
         </a>
         <div style="margin-left: 3em; font-size: 20pt; font: bold">
-            Business Improvement and Production Excellence
+            Ideas Garden and Business Improvement
         </div>
         <div style="float: right; margin-right: 3.5em; top: 0.2em">
             <asp:Label ID="mssgLbl" runat="server" Text=""></asp:Label>
@@ -314,34 +319,6 @@
             </div>
 
             <div class="col-sm-3">
-                <a href="taskPage.aspx" class="image">
-                    <img src="images/Savings1.png" alt="" />
-                    <h4>Cost Saving Agenda</h4>
-                    <p>view cost saving Agenda</p>
-                </a>
-            </div>
-
-            <div class="col-sm-3">
-                <a href="Default.aspx?pr=9" class="image">
-                    <img src="images/redflag.jpg" alt="" />
-                    <h4>Service/Material</h4>
-                    <p>service/material cost red flag</p>
-                </a>
-            </div>
-
-            <div class="col-sm-3">
-                <a href="Default.aspx?CR=3" class="image">
-                    <img src="images/iCostreduction3.png" alt="" />
-                    <h4>Cost Reduction Portal</h4>
-                    <p>Submit Improvement Ideas</p>
-                </a>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-
-            <div class="col-sm-3">
                 <a href="AppGatePass.aspx?sAppToken=pec" class="image">
                     <img src="images/oilandGasField.jpg" alt="" />
                     <h4>Field Visit
@@ -360,25 +337,33 @@
             </div>
 
             <div class="col-sm-3">
-                <a href="AppGatePass.aspx?sAppToken=flr" class="image">
-                    <img src="Images/i_WeeklyHighLights1.jpg" alt="" />
-                    <h4>Weekly Highlights</h4>
-                    <p>&nbsp;</p>
-                </a>
-            </div>
-
-            <div class="col-sm-3">
-                <a href="App/CommitmentControl/Default.aspx" class="image">
-                    <img src="Images/i_CommitmentControl.jpg" alt="" />
-                    <h4>Commitment Control</h4>
-                    <p>SCiN Budget Control</p>
+                <a href="Default.aspx?CR=3" class="image">
+                    <img src="images/iCostreduction3.png" alt="" />
+                    <h4>Cost Reduction Portal</h4>
+                    <p>Submit Improvement Ideas</p>
                 </a>
             </div>
         </div>
-
         <br>
         <br>
         <div class="row">
+
+             <div class="col-sm-3">
+                 <a href="taskPage.aspx" class="image">
+                     <img src="images/Savings1.png" alt="" />
+                     <h4>Cost Saving Agenda</h4>
+                     <p>view cost saving Agenda</p>
+                 </a>
+             </div>
+
+             <div class="col-sm-3">
+                 <a href="Default.aspx?pr=9" class="image">
+                     <img src="images/redflag.jpg" alt="" />
+                     <h4>Service/Material</h4>
+                     <p>service/material cost red flag</p>
+                 </a>
+             </div>
+
             <div class="col-sm-3">
                 <a href="App/IDD/Default.aspx" class="image">
                     <img src="Images/IntegrityDueDiligence.jpg" alt="" />
@@ -395,13 +380,35 @@
                 </a>
             </div>
 
+            
+        </div>
+
+        <br>
+        <br>
+        <div class="row">
+            <%--<div class="col-sm-3">
+                <a href="AppGatePass.aspx?sAppToken=flr" class="image">
+                    <img src="Images/i_WeeklyHighLights1.jpg" alt="" />
+                    <h4>Weekly Highlights</h4>
+                    <p>&nbsp;</p>
+                </a>
+            </div>
+
             <div class="col-sm-3">
+                <a href="App/CommitmentControl/Default.aspx" class="image">
+                    <img src="Images/i_CommitmentControl.jpg" alt="" />
+                    <h4>Commitment Control</h4>
+                    <p>SCiN Budget Control</p>
+                </a>
+            </div>--%>
+
+            <%--<div class="col-sm-3">
                 <a href="http://161.158.8.7:8080/" class="image">
                     <img src="Images/BONGAMR.jpeg" alt="" />
                     <h4>Bonga Morning Report</h4>
                     <p>Bonga Morning Report (BMR)</p>
                 </a>
-            </div>
+            </div>--%>
 
         </div>
 
@@ -416,8 +423,8 @@
             <div class="12u">
                 <div id="copyright">
                     <ul style="list-style-type: none;" class="menu">
-                        <li>&copy; Production Directorate. All rights reserved</li>
-                        <li>Design: <a href="">Business Improvement and Production Excellence</a></li>
+                        <li>&copy; Business Transformation. All rights reserved</li>
+                        <li>Design: <a href="">Business Transformation</a></li>
                         <li>Support Contact +234 807 022 4772</li>
                         <li><a href="UserManagement.aspx">Portal Manager</a></li>
                     </ul>

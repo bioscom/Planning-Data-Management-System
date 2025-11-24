@@ -218,7 +218,7 @@
                             <asp:Label ID="Label18" runat="server" Text="Does Business Ownership have Government official element?:" Width="250px"></asp:Label>
                         </td>
                         <td style="height: 35px">
-                            <telerik:RadRadioButtonList ID="btnLstGO" runat="server" AutoPostBack="False" Columns="2" Direction="Horizontal">
+                    <telerik:RadRadioButtonList ID="btnLstGO" runat="server" AutoPostBack="False" Columns="2" Direction="Horizontal">
                             </telerik:RadRadioButtonList>
                         </td>
                     </tr>

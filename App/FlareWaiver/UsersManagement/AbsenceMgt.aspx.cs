@@ -9,7 +9,7 @@ public partial class UsersManagement_AbsenceMgt : System.Web.UI.Page
         if (!IsPostBack)
         {
             addRoleToDropDown(appUserRolesFlrWaiver.userRole.AssurancePSMgr);
-            addRoleToDropDown(appUserRolesFlrWaiver.userRole.AssuranceOffshore);
+            //addRoleToDropDown(appUserRolesFlrWaiver.userRole.AssuranceOffshore);
             addRoleToDropDown(appUserRolesFlrWaiver.userRole.AssuranceOnshore);
             addRoleToDropDown(appUserRolesFlrWaiver.userRole.Approval);
             //addRoleToDropDown(appUserRolesFlrWaiver.userRole.GMDeepWater);
@@ -39,10 +39,10 @@ public partial class UsersManagement_AbsenceMgt : System.Web.UI.Page
             {
                 LoadDelegates(oappUsersHelper.dtGetDeligatedUserByRole2((int)appUserRolesFlrWaiver.userRole.AssurancePSMgr));
             }
-            else if (int.Parse(ddlRoles.SelectedValue) == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
-            {
-                LoadDelegates(oappUsersHelper.dtGetDeligatedUserByRole2((int)appUserRolesFlrWaiver.userRole.AssuranceOffshore));
-            }
+            //else if (int.Parse(ddlRoles.SelectedValue) == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
+            //{
+            //    LoadDelegates(oappUsersHelper.dtGetDeligatedUserByRole2((int)appUserRolesFlrWaiver.userRole.AssuranceOffshore));
+            //}
             else if (int.Parse(ddlRoles.SelectedValue) == (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore)
             {
                 LoadDelegates(oappUsersHelper.dtGetDeligatedUserByRole2((int)appUserRolesFlrWaiver.userRole.AssuranceOnshore));

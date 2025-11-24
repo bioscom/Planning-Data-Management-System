@@ -1,12 +1,14 @@
-﻿using System;
-using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.Common; using Oracle.ManagedDataAccess.Client;
-using System.Collections.Generic;
-using System.Linq;
+﻿using CS.DAL;
 using Microsoft.Security.Application;
+using Oracle.ManagedDataAccess.Client;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common; 
+using System.Linq;
 using System.Web;
-using CS.DAL;
+using System.Web.UI.WebControls;
+//using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 /// <summary>
 /// Summary description for UserMgt
@@ -28,9 +30,9 @@ public class appUsersHelper
             sRet = HttpContext.Current.User.Identity.Name;
             int xPos = sRet.LastIndexOf("\\");
             sRet = sRet.Substring(xPos + 1);
-            if (sRet.ToLower() == "bioscom")
+            if (sRet.ToLower() == "isaac.bejide")
             {
-                sRet = "isaac.bejide-b";
+                sRet = "isaac.bejide";
             }
             sRet = sRet + emailClient.c_sShellMailExt;
             sRet = sRet.ToLower();
@@ -2020,43 +2022,69 @@ public class appUsersHelper
 
     public static DataTable dtGetLastLoggedOn(DateTime o)
     {
-        string sql = "SELECT * FROM PROD_USERMGT WHERE TO_CHAR(LASTVISIT, 'DD-MON-YYYY') = :dtLastVisit";
+        //string sql = "SELECT * FROM PROD_USERMGT WHERE TO_CHAR(LASTVISIT, 'DD-MON-YYYY') = :dtLastVisit";
+        string sql = "SELECT * FROM PROD_USERMGT WHERE TRUNC(LASTVISIT) = TRUNC(:dtLastVisit)";
 
         OracleCommand comm = GenericDataAccess.CreateCommand();
         comm.CommandText = sql;
 
         OracleParameter param = comm.CreateParameter();
         param.ParameterName = ":dtLastVisit";
-        param.Value = o.ToShortDateString();
         param.OracleDbType = OracleDbType.Date;
+        param.Value = o; //.ToShortDateString();
         comm.Parameters.Add(param);
 
         return GenericDataAccess.ExecuteSelectCommand(comm);
     }
 
+    //public static DataTable dtGetCurrentlyLoggedOn(DateTime o, int t)
+    //{
+    //    string sql = "SELECT * FROM PROD_USERMGT WHERE TO_CHAR(LASTVISIT, 'DD-MON-YYYY') = :dtLastVisit AND TO_CHAR(LASTVISIT, 'MI') BETWEEN :t1 AND :t2";
+
+    //    OracleCommand comm = GenericDataAccess.CreateCommand();
+    //    comm.CommandText = sql;
+
+    //    OracleParameter param = comm.CreateParameter();
+    //    param.ParameterName = ":dtLastVisit";
+    //    param.Value = o.ToShortDateString();
+    //    param.OracleDbType = OracleDbType.Date;
+    //    comm.Parameters.Add(param);
+
+    //    param = comm.CreateParameter();
+    //    param.ParameterName = ":t1";
+    //    param.Value = (t - 15); //ie, the numbers of users that logged on in the last 15 minutes.
+    //    param.OracleDbType = OracleDbType.Int32;
+    //    comm.Parameters.Add(param);
+
+    //    param = comm.CreateParameter();
+    //    param.ParameterName = ":t2";
+    //    param.Value = t;
+    //    param.OracleDbType = OracleDbType.Int32;
+    //    comm.Parameters.Add(param);
+
+    //    return GenericDataAccess.ExecuteSelectCommand(comm);
+    //}
+
     public static DataTable dtGetCurrentlyLoggedOn(DateTime o, int t)
     {
-        string sql = "SELECT * FROM PROD_USERMGT WHERE TO_CHAR(LASTVISIT, 'DD-MON-YYYY') = :dtLastVisit AND TO_CHAR(LASTVISIT, 'MI') BETWEEN :t1 AND :t2";
+        // Example: Get users who logged on in last t minutes up to date/time o
+        string sql = "SELECT * FROM PROD_USERMGT WHERE LASTVISIT BETWEEN :fromTime AND :toTime";
 
         OracleCommand comm = GenericDataAccess.CreateCommand();
         comm.CommandText = sql;
 
+        // fromTime = o minus t minutes
         OracleParameter param = comm.CreateParameter();
-        param.ParameterName = ":dtLastVisit";
-        param.Value = o.ToShortDateString();
+        param.ParameterName = ":fromTime";
         param.OracleDbType = OracleDbType.Date;
+        param.Value = o.AddMinutes(-t);     // DateTime directly
         comm.Parameters.Add(param);
 
+        // toTime = o
         param = comm.CreateParameter();
-        param.ParameterName = ":t1";
-        param.Value = (t - 15); //ie, the numbers of users that logged on in the last 15 minutes.
-        param.OracleDbType = OracleDbType.Int32;
-        comm.Parameters.Add(param);
-
-        param = comm.CreateParameter();
-        param.ParameterName = ":t2";
-        param.Value = t;
-        param.OracleDbType = OracleDbType.Int32;
+        param.ParameterName = ":toTime";
+        param.OracleDbType = OracleDbType.Date;
+        param.Value = o;
         comm.Parameters.Add(param);
 
         return GenericDataAccess.ExecuteSelectCommand(comm);

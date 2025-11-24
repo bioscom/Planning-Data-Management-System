@@ -471,7 +471,7 @@ public static class StoredProcedureFlareWaiver
 
     public static string getAuditTrails()
     {
-        string sql = "SELCET STAND, COMMENTS, DATE_REVIEWED FROM FLARE_APPROVAL_AUDIT";
+        string sql = "SELECT IDREQUEST, STAND, COMMENTS, DATE_REVIEWED FROM FLARE_APPROVAL_AUDIT";
         return sql;
     }
 

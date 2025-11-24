@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 // Use the `FusionCharts.Charts` namespace to be able to use classes and methods required to // create charts.
-using FusionCharts.Charts;
+//using FusionCharts.Charts;
 
 public partial class App_FlareWaiver_UserControl_GraphicalReports : System.Web.UI.UserControl
 {
@@ -42,10 +42,10 @@ public partial class App_FlareWaiver_UserControl_GraphicalReports : System.Web.U
         strXML += "</chart>";
 
         // Initialize the chart.
-        Chart factoryOutput = new Chart("column2d", "ByFunction", "2500", "600", "xml", strXML);
+        //Chart factoryOutput = new Chart("column2d", "ByFunction", "2500", "600", "xml", strXML);
 
         // Render the chart.
-        FCLiteral.Text = factoryOutput.Render();
+        //FCLiteral.Text = factoryOutput.Render();
     }
 
     public void GraphicalReporterSeries(int iYear, string sMonth, int iMonth, int iDay)
@@ -88,14 +88,14 @@ public partial class App_FlareWaiver_UserControl_GraphicalReports : System.Web.U
         strXML += "</chart>";
 
         // Initialize the chart.
-        Chart factoryOutput = new Chart("column2d", "myChartStacked", "2500", "600", "xml", strXML);
+        //Chart factoryOutput = new Chart("column2d", "myChartStacked", "2500", "600", "xml", strXML);
         //msline
         //stackedcolumn2d
         //column2d
         //msstackedcolumn2d
 
         // Render the chart.
-        FCLiteral.Text = factoryOutput.Render();
+        //FCLiteral.Text = factoryOutput.Render();
     }
 
 }

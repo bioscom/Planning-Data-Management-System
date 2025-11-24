@@ -21,7 +21,7 @@ public partial class FlareApprovalProc : aspnetPage
         try
         {
             string[] sPageAccess = { appUserRolesFlrWaiver.userRole.LineManager.ToString(), appUserRolesFlrWaiver.userRole.AssurancePSMgr.ToString(),
-                                     appUserRolesFlrWaiver.userRole.AssuranceOnshore.ToString(), appUserRolesFlrWaiver.userRole.AssuranceOffshore.ToString(),
+                                     //appUserRolesFlrWaiver.userRole.AssuranceOnshore.ToString(), appUserRolesFlrWaiver.userRole.AssuranceOffshore.ToString(),
                                      appUserRolesFlrWaiver.userRole.Approval.ToString(), appUserRolesFlrWaiver.userRole.Administrator.ToString() };
             appUserRolesFlrWaiver oAccess = new appUserRolesFlrWaiver();
             bRet = oAccess.grantPageAccess(sPageAccess, (appUserRolesFlrWaiver.userRole)this.oSessnx.getOnlineUser.m_iRoleIdFlr);
@@ -155,7 +155,7 @@ public partial class FlareApprovalProc : aspnetPage
                 }
                 else if (Facility.objGetFacilityById(oRequestFacility.m_iFacilityId).m_iLocation == (int)commonEnums.OU.SNEPCO)
                 {
-                    Supported(lRequestId, iStand, (int)RequestStatusReporter.RequestStatusRpt.AssuranceReviewSupport, (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore, oFlareWaiverRequest, oCopy);
+                    //Supported(lRequestId, iStand, (int)RequestStatusReporter.RequestStatusRpt.AssuranceReviewSupport, (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore, oFlareWaiverRequest, oCopy);
                     Supported(lRequestId, iStand, (int)RequestStatusReporter.RequestStatusRpt.AssuranceReviewSupport, (int)appUserRolesFlrWaiver.userRole.AssurancePSMgr, oFlareWaiverRequest, oCopy);
                     break;
                 }

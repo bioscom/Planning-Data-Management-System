@@ -47,14 +47,14 @@ public partial class App_FlareWaiver_AssignAssetsToGM : aspnetPage
             //}
 
             int y = 1;
-            List<appUsers> lstGMOffShore = oAppUsersHelper.lstGetFlareWaiverUserByRole((int)appUserRolesFlrWaiver.userRole.AssuranceOffshore);
+            //List<appUsers> lstGMOffShore = oAppUsersHelper.lstGetFlareWaiverUserByRole((int)appUserRolesFlrWaiver.userRole.AssuranceOffshore);
             List<appUsers> lstGMOnShore = oAppUsersHelper.lstGetFlareWaiverUserByRole((int)appUserRolesFlrWaiver.userRole.AssuranceOnshore);
 
-            foreach (appUsers oGMOffShore in lstGMOffShore)
-            {
-                drpGMOnOffShore.Items.Add(new ListItem(y + ". " + oGMOffShore.m_sFullName + "{" + appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssuranceOffshore) + "}", oGMOffShore.m_iUserId.ToString()));
-                y++;
-            }
+            //foreach (appUsers oGMOffShore in lstGMOffShore)
+            //{
+            //    drpGMOnOffShore.Items.Add(new ListItem(y + ". " + oGMOffShore.m_sFullName + "{" + appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssuranceOffshore) + "}", oGMOffShore.m_iUserId.ToString()));
+            //    y++;
+            //}
             foreach (appUsers oGMOnShore in lstGMOnShore)
             {
                 drpGMOnOffShore.Items.Add(new ListItem(y + ". " + oGMOnShore.m_sFullName + "{" + appUserRolesFlrWaiver.userRoleDesc(appUserRolesFlrWaiver.userRole.AssuranceOnshore) + "}", oGMOnShore.m_iUserId.ToString()));

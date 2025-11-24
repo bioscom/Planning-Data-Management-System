@@ -331,7 +331,7 @@ public class appUserRolesFlrWaiver
         LineManager = 3,
         AssurancePSMgr = 4,
         AssuranceOnshore = 5,
-        AssuranceOffshore = 6,
+        //AssuranceOffshore = 6,
         Approval = 9
 
         //GMProduction = 5,
@@ -351,8 +351,8 @@ public class appUserRolesFlrWaiver
                 case userRole.Initiator: sRet = "Request Owner"; break;
                 case userRole.LineManager: sRet = "Line Manager"; break;
                 case userRole.AssurancePSMgr: sRet = "Assurance Review/Support (PS Mgr)"; break;
-                case userRole.AssuranceOnshore: sRet = "Assurance Review/Support (SPDC)"; break;
-                case userRole.AssuranceOffshore: sRet = "Assurance Review/Support (SNEPCO)"; break;
+                case userRole.AssuranceOnshore: sRet = "Assurance Review/Support (Renaissance)"; break;
+                //case userRole.AssuranceOffshore: sRet = "Assurance Review/Support (SNEPCO)"; break;
                 case userRole.Approval: sRet = "Approval"; break;
                 //case userRole.GMProduction: sRet = "GM Production"; break;
                 //case userRole.GMOffshore: sRet = "GM Offshore"; break;
@@ -409,7 +409,7 @@ public class appUserRolesFlrWaiver
         addRoleToDropDown(userRole.LineManager, ddlUserRole);
         addRoleToDropDown(userRole.AssurancePSMgr, ddlUserRole);
         addRoleToDropDown(userRole.AssuranceOnshore, ddlUserRole);
-        addRoleToDropDown(userRole.AssuranceOffshore, ddlUserRole);
+        //addRoleToDropDown(userRole.AssuranceOffshore, ddlUserRole);
         addRoleToDropDown(userRole.Approval, ddlUserRole);
         //addRoleToDropDown(appUserRolesFlrWaiver.userRole.GMDeepWater, ddlUserRole);
         //addRoleToDropDown(appUserRolesFlrWaiver.userRole.GMOffshore, ddlUserRole);

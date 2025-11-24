@@ -37,12 +37,12 @@ public partial class FlareRequestRouter : aspnetPage
             oFacilityAssetGM = oFacilityAssetGMHelper.objGetFacilityAssetGMByFacilityId(oRequestFacility.m_iFacilityId);
             oAppUser = oAppUsersHelper.objGetUserByUserID(oFacilityAssetGM.m_iUserId);
 
-            if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
-            {
-                GetUsersByRoleId(ddlAssetGM, appUserRolesFlrWaiver.userRole.AssuranceOffshore);
-                break;
-            }
-            else if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore)
+            //if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
+            //{
+            //    GetUsersByRoleId(ddlAssetGM, appUserRolesFlrWaiver.userRole.AssuranceOffshore);
+            //    break;
+            //}
+            if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore)
             {
                 GetUsersByRoleId(ddlAssetGM, appUserRolesFlrWaiver.userRole.AssuranceOnshore);
                 break;
@@ -60,11 +60,11 @@ public partial class FlareRequestRouter : aspnetPage
                 lblLineMgr.Text = oAppUsersHelper.objGetUserByUserID(oFlareApproval.m_iUserId).m_sFullName;
                 Stand(oFlareApproval.m_iStand, lblLineMgrStand, ddlLineMgr, lineMgrBtn);
             }
-            else if (oFlareApproval.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
-            {
-                lblAssetGM.Text = oAppUsersHelper.objGetUserByUserID(oFlareApproval.m_iUserId).m_sFullName;
-                Stand(oFlareApproval.m_iStand, lblAssetGMgrStand, ddlAssetGM, assetGMBtn);
-            }
+            //else if (oFlareApproval.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
+            //{
+            //    lblAssetGM.Text = oAppUsersHelper.objGetUserByUserID(oFlareApproval.m_iUserId).m_sFullName;
+            //    Stand(oFlareApproval.m_iStand, lblAssetGMgrStand, ddlAssetGM, assetGMBtn);
+            //}
             else if (oFlareApproval.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore)
             {
                 lblAssetGM.Text = oAppUsersHelper.objGetUserByUserID(oFlareApproval.m_iUserId).m_sFullName;
@@ -152,12 +152,12 @@ public partial class FlareRequestRouter : aspnetPage
             oFacilityAssetGM = oFacilityAssetGMHelper.objGetFacilityAssetGMByFacilityId(oRequestFacility.m_iFacilityId);
             oAppUser = oAppUsersHelper.objGetUserByUserID(oFacilityAssetGM.m_iUserId);
 
-            if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
-            {
-                router(int.Parse(ddlAssetGM.SelectedValue), (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore, long.Parse(Request.QueryString["RequestId"].ToString()));
-                break;
-            }
-            else if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore)
+            //if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore)
+            //{
+            //    router(int.Parse(ddlAssetGM.SelectedValue), (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore, long.Parse(Request.QueryString["RequestId"].ToString()));
+            //    break;
+            //}
+            if (oAppUser.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore)
             {
                 router(int.Parse(ddlAssetGM.SelectedValue), (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore, long.Parse(Request.QueryString["RequestId"].ToString()));
                 break;

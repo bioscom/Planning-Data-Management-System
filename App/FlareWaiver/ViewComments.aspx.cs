@@ -42,7 +42,7 @@ public partial class ViewComments : aspnetPage
                     lineMgrCkb.Enabled = false;
                 }
             }
-            else if ((oFlareApproval.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore) || (oFlareApproval.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore))
+            else if ((oFlareApproval.m_iRoleIdFlr == (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore))
             {
                 lblAssuranceGM.Text = oappUsersHelper.objGetUserByUserID(oFlareApproval.m_iUserId).m_sFullName;
                 lblAssuranceStand.Text = RequestStatusReporter.RequestStatusRptDesc((RequestStatusReporter.RequestStatusRpt)oFlareApproval.m_iStand);
@@ -92,7 +92,7 @@ public partial class ViewComments : aspnetPage
         if (PSMgrCkb.Checked) SendReminder(oFlareWaiverRequest.m_lRequestId, (int)appUserRolesFlrWaiver.userRole.AssurancePSMgr, oFlareWaiverRequest.m_sReason, oFlareWaiverRequest.m_sRequestNumber);
         if (ApprovalCkb.Checked) SendReminder(oFlareWaiverRequest.m_lRequestId, (int)appUserRolesFlrWaiver.userRole.Approval, oFlareWaiverRequest.m_sReason, oFlareWaiverRequest.m_sRequestNumber);
 
-        if (AssuranceCkb.Checked) SendReminder(oFlareWaiverRequest.m_lRequestId, (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore, oFlareWaiverRequest.m_sReason, oFlareWaiverRequest.m_sRequestNumber);
+        //if (AssuranceCkb.Checked) SendReminder(oFlareWaiverRequest.m_lRequestId, (int)appUserRolesFlrWaiver.userRole.AssuranceOffshore, oFlareWaiverRequest.m_sReason, oFlareWaiverRequest.m_sRequestNumber);
         if (AssuranceCkb.Checked) SendReminder(oFlareWaiverRequest.m_lRequestId, (int)appUserRolesFlrWaiver.userRole.AssuranceOnshore, oFlareWaiverRequest.m_sReason, oFlareWaiverRequest.m_sRequestNumber);
 
         if (!lineMgrCkb.Checked || !PSMgrCkb.Checked || !ApprovalCkb.Checked || !AssuranceCkb.Checked)

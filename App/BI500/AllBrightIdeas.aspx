@@ -3,47 +3,56 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="headId" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" Runat="Server">
+    
     <ajaxToolkit:ToolkitScriptManager ID="smtAjaxManager" runat="Server" CombineScripts="false" EnablePartialRendering="true" />
 
-    <table class="tMainBorder" style="width: 98%">
-        <tr>
-            <td class="cHeadTile" >Bright Idea Register</td>
-        </tr>
-        <tr>
-            <td>
-                <ajaxToolkit:TabContainer runat="server" ID="smtAjaxTabs" ActiveTabIndex="0" Width="100%">
+    <div class="card shadow-sm mb-4">
 
-                    <ajaxToolkit:TabPanel runat="server" ID="pnlAwaiting" HeaderText="Ongoing Projects" Visible="true">
-                        <HeaderTemplate>
-                            Pending Bright Ideas
-                        </HeaderTemplate>
-                        <ContentTemplate>
-                            <bi500:oPndgRqst ID="oPndgRqst1" runat="server"></bi500:oPndgRqst>
-                        </ContentTemplate>
-                    </ajaxToolkit:TabPanel>
+    <!-- Title -->
+    <div class="card-header fw-bold">
+        Ideas Register
+    </div>
 
-                    <ajaxToolkit:TabPanel runat="server" ID="pnlApproved" HeaderText="Approved Projects" Visible="true">
-                        <HeaderTemplate>
-                            Approved Bright Ideas
-                        </HeaderTemplate>
-                        <ContentTemplate>
-                            <bi500:oAprdgRqst ID="oAprdgRqst1" runat="server"></bi500:oAprdgRqst>
-                        </ContentTemplate>
-                    </ajaxToolkit:TabPanel>
+    <!-- Body -->
+    <div class="card-body">
 
-                    <ajaxToolkit:TabPanel runat="server" ID="pnlDiscontinued" HeaderText="Rejected Projects" Visible="true">
-                        <HeaderTemplate>
-                            Rejected Bright Ideas
-                        </HeaderTemplate>
-                        <ContentTemplate>
-                        </ContentTemplate>
-                    </ajaxToolkit:TabPanel>
+        <!-- AJAX Toolkit Tabs -->
+        <ajaxToolkit:TabContainer runat="server" ID="smtAjaxTabs" ActiveTabIndex="0">
 
-                </ajaxToolkit:TabContainer>
+            <!-- Ongoing Projects -->
+            <ajaxToolkit:TabPanel runat="server" ID="pnlAwaiting" HeaderText="Ongoing Projects" Visible="true">
+                <HeaderTemplate>
+                    <div class="custom-tab-header">Pending Ideas</div>
+                </HeaderTemplate>
+                <ContentTemplate>
+                    <bi500:oPndgRqst ID="oPndgRqst1" runat="server"></bi500:oPndgRqst>
+                </ContentTemplate>
+            </ajaxToolkit:TabPanel>
 
-            </td>
-        </tr>
-    </table>
-    <br />
+            <!-- Approved Projects -->
+            <ajaxToolkit:TabPanel runat="server" ID="pnlApproved" HeaderText="Approved Projects" Visible="true">
+                <HeaderTemplate>
+                    <div class="custom-tab-header">Approved Ideas</div>
+                </HeaderTemplate>
+                <ContentTemplate>
+                    <bi500:oAprdgRqst ID="oAprdgRqst1" runat="server"></bi500:oAprdgRqst>
+                </ContentTemplate>
+            </ajaxToolkit:TabPanel>
+
+            <!-- Rejected Projects -->
+            <ajaxToolkit:TabPanel runat="server" ID="pnlDiscontinued" HeaderText="Rejected Projects" Visible="true">
+                <HeaderTemplate>
+                    <div class="custom-tab-header">Rejected Ideas</div>
+                </HeaderTemplate>
+                <ContentTemplate>
+                    <!-- Add your content here if needed -->
+                </ContentTemplate>
+            </ajaxToolkit:TabPanel>
+
+        </ajaxToolkit:TabContainer>
+
+    </div>
+</div>
+
 </asp:Content>
 

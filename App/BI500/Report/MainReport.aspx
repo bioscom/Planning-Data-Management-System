@@ -5,27 +5,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="headId" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlaceHolder" Runat="Server">
-    <table class="tSubGray" style="width: 98%">
-        <tr>
-            <td class="cHeadTile">Bright Idea</td>
-        </tr>
-        <tr>
-            <td valign="top">
-                <asp:ScriptManager ID="ScriptManager1" runat="server">
-                </asp:ScriptManager>
-            </td>
-        </tr>
-        <tr>
-            <td valign="top">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <div class="col-md-12 mb-4">
+        <div class="card">
+            <div class="card-header">
+                Idea Report
+            </div>
+            <div class="card-body">
                 <asp:Panel ID="rptViewPanel" runat="server">
                     <rsweb:ReportViewer ID="rptViewer" runat="server" BorderColor="Black"
                         BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="8pt"
                         Height="600px" Width="100%" ZoomMode="Percent">
                     </rsweb:ReportViewer>
                 </asp:Panel>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
 
 </asp:Content>
-

@@ -45,24 +45,3 @@
     </ul>
     <asp:SiteMapDataSource ID="MyDataSource" runat="server" ShowStartingNode="false" />
 </div>
-
-<%--<asp:Menu ID="UserMenu" DataSourceID="MyDataSource" runat="server" DynamicHorizontalOffset="0"
-    StaticMenuItemStyle-BorderWidth="1px" DynamicMenuItemStyle-BorderWidth="1px"
-    StaticMenuItemStyle-VerticalPadding="3px" DynamicMenuItemStyle-VerticalPadding="3px"
-    StaticMenuItemStyle-BorderStyle="Solid" DynamicMenuItemStyle-BorderStyle="Solid"
-    StaticMenuItemStyle-BorderColor="Silver" DynamicMenuItemStyle-BorderColor="Silver"
-    Font-Names="Arial" StaticSubMenuIndent="10px" Font-Size="12px" StaticDisplayLevels="2" Width="230px">
-    <DataBindings>
-        <asp:MenuItemBinding DataMember="MenuItem" NavigateUrlField="NavigateUrl" TextField="Title" ToolTipField="ToolTip" />
-    </DataBindings>
-    <LevelMenuItemStyles>
-        <asp:MenuItemStyle CssClass="level1" />
-        <asp:MenuItemStyle CssClass="level2" />
-        <asp:MenuItemStyle CssClass="level3" />
-        <asp:MenuItemStyle CssClass="level4" />
-    </LevelMenuItemStyles>
-
-    <StaticHoverStyle CssClass="hoverstylestatic" />
-    <DynamicHoverStyle CssClass="hoverstyledynamic" />
-</asp:Menu>
-<asp:SiteMapDataSource ID="MyDataSource" runat="server" ShowStartingNode="false" />--%>

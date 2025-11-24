@@ -97,13 +97,13 @@ body
 
 #navigation1 {
 	top: 6em;
-	float:left;
-	border-left:solid 1px gray;
-    border-right:solid 1px gray;
-	border-top:0px;
-	background-color:gold;
-	width:100%;
-	height:30px;
+	float: left;
+	border-left: solid 1px gray;
+	border-right: solid 1px gray;
+	border-top: 0px;
+	background-color: #39e90e;
+	width: 100%;
+	height: 30px;
 }
 
 #navigation2 {

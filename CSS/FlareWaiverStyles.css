@@ -32,11 +32,10 @@ body
 
 #header .title {
 	font: 150% Arial, Helvetica, Georgia, "Times New Roman", Times, serif;
-	color: #D42E12;
-	float: left;
+	color: #00b300;
 	margin-top: 1.0em;
-	margin-left: 4.5em;
 	font-weight:bold;
+	/*float: left;*/
 }
 
 #header .message 
@@ -56,7 +55,7 @@ body
 	background-color: transparent;
 	float: right;
 	margin-right: 0.1em;
-	margin-top: 0.5em;
+	/*margin-top: 0.5em;*/
 	font-weight:normal;
     font-style: normal;
     font-variant: normal;
@@ -90,25 +89,23 @@ body
 
 #navigation1 {
 	top: 6em;
-	float:left;
-	
-	border-left:solid 1px gray;
-    border-right:solid 1px gray;
-	border-top:0px;
-	background-color:gold;
-	width:100%;
-	height:30px;
+	float: left;
+	border-left: solid 1px gray;
+	border-right: solid 1px gray;
+	border-top: 0px;
+	background-color: #28A745;
+	width: 100%;
+	height: 30px;
 	/*background: url('../images/bg_p1.gif') repeat-x left top;*/
 }
 
 #navigation2 {
 	top: 6em;
 	float:left;
-	
     border-left:solid 1px gray;
     border-right:solid 1px gray;
     border-bottom:solid 1px gray;
-	background-color:#D42E12;
+	background-color:#ff0000;
 	width:100%;
 	height:7px;
 }
@@ -241,7 +238,7 @@ body
 
 .DataWebControlStyle
 {
-    font-size: 95%;
+    font-size: 90%;
     line-height:1.125em;
 }
 
@@ -253,6 +250,7 @@ a:link, a:visited  {
 {
     text-align:center;
     font-size:11px;
+	font-weight:bold;
 }
 
 .AlternatingRowStyle
@@ -263,12 +261,11 @@ a:link, a:visited  {
     /*font-size:12px;*/
 }
 
-.RowStyle
-{
-    background-color:#FFFF99; 
-    color:black;
-    vertical-align:middle;
-    /*font-size:12px;*/
+.RowStyle {
+	background-color: #CBF0CB;
+	color: black;
+	vertical-align: middle;
+	/*font-size:12px;*/
 }
 
 .SelectedRowStyle
@@ -781,4 +778,297 @@ a:link, a:visited  {
 	vertical-align: top;
 	text-align:right;
     font-weight:bold;
+}
+
+
+
+
+/*Menu */
+
+#menu {
+	/*background-color: #ddf; */
+	float: left;
+	margin-left: 0.5em;
+	/*width: 90%;*/
+	height: 35px;
+	margin-top: 0.2em;
+	padding: 0;
+	background-color: silver;
+	/*top: 3em;width: 98%; */
+}
+
+	#menu ul {
+		margin: 0;
+		padding-left: 0em;
+		list-style: none;
+		line-height: normal;
+		height: 35px;
+		padding-right: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		border-bottom: 1px solid silver;
+	}
+
+	#menu li {
+		float: left;
+	}
+
+	#menu a {
+		display: block;
+		margin-top: 5px;
+		margin-right: 3px;
+		padding: 7px 10px 7px 10px;
+		background: #FFFFFF;
+		text-decoration: none;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 10px;
+		color: #000000;
+		border: none;
+	}
+
+		#menu a:hover, #menu .current_page_item a {
+		}
+
+		#menu a:hover {
+			text-decoration: underline;
+			background-color: #F93D00;
+			color: White;
+		}
+
+		#menu a:select {
+			text-decoration: underline;
+			background-color: #F93D00;
+			color: White;
+		}
+
+
+
+a.button {
+	float: left;
+	font-size: 110%;
+	font-weight: bold;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #333;
+	border-bottom: 1px solid #333;
+	color: #333;
+	width: auto;
+}
+
+	a.button:hover {
+		border-top: 1px solid #333;
+		border-left: 1px solid #333;
+		border-right: 1px solid #999;
+		border-bottom: 1px solid #999;
+		color: #333;
+	}
+
+	a.button span {
+		background: #d4d0c8 url(images/bg_btn.gif) repeat-x;
+		float: left;
+		line-height: 24px;
+		height: 24px;
+		padding: 0 10px;
+		border-right: 1px solid #777;
+		border-bottom: 1px solid #777;
+	}
+
+	a.button:hover span {
+		border: none;
+		border-top: 1px solid #777;
+		border-left: 1px solid #777;
+		background: #d4d0c8 url(images/bg_btnOver.gif) repeat-x;
+		cursor: pointer;
+	}
+
+/*********************************************************  Modal Popup *********************************************************/
+
+.modalBackground {
+	background-color: Gray;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+
+.modalPopup {
+	background-color: #ffffdd;
+	border-width: 3px;
+	border-style: solid;
+	border-color: Gray;
+	padding: 3px;
+	width: 250px;
+}
+
+	.modalPopup p {
+		padding: 5px;
+	}
+
+
+
+
+/* ========== SIDEBAR CONTAINER ========== */
+#navigationM {
+	top: 5em;
+	left: 0;
+	width: 220px;
+	background: #E9F9E9; /* soft green background */
+	border-right: 1px solid #C5E7C5;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 7px;
+	padding-top: 10px;
+	height: 100vh;
+	overflow-y: auto;
+}
+
+	/* Remove bullet points */
+	#navigationM ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	/* ========== TOP-LEVEL MENU ITEMS ========== */
+	#navigationM li {
+		margin: 0;
+		border-bottom: 1px solid #D9EBD9;
+	}
+
+		#navigationM li a {
+			display: block;
+			padding: 10px 15px;
+			background-color: #28A745; /* Rich green */
+			color: white;
+			font-weight: bold;
+			text-decoration: none;
+			border-left: 6px solid #1E7F37;
+			transition: all 0.25s ease-in-out;
+		}
+
+			/* Hover Effect */
+			#navigationM li a:hover {
+				background-color: #CBF0CB; /* soft lime green */
+				color: #0B4F0B;
+				border-left-color: #28A745;
+			}
+
+	/* ========== SUBMENU ========== */
+	#navigationM ul ul {
+		background: #F6FFF6; /* very light green */
+	}
+
+		#navigationM ul ul li {
+			border-bottom: 1px solid #DCEEDC;
+		}
+
+		#navigationM ul ul a:link,
+		#navigationM ul ul a:visited {
+			background-color: #F6FFF6;
+			color: #166A16;
+			font-weight: normal;
+			padding: 8px 20px;
+			border-left: 4px solid #A8DDA8;
+		}
+
+		#navigationM ul ul a:hover {
+			background-color: #CBF0CB;
+			color: #0B4F0B;
+			border-left-color: #28A745;
+		}
+
+
+
+
+
+
+
+
+
+
+
+.header1 {
+	background-color: white;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+html .t-container-fluid,
+html .t-row-wrap > .t-row {
+	max-width: none;
+	max-height: none;
+}
+
+.menu {
+	background-color: #E8EAEC;
+}
+
+.header3 {
+	/*background: linear-gradient(#FDFEFE, #F0F2F4) repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+}
+
+
+.content {
+	width: 100%;
+}
+
+.article2 {
+	/*background-color: #EEF1F3;*/
+}
+
+.footer {
+	background-color: black;
+}
+
+html,
+body,
+form {
+	margin: 0;
+	padding: 0;
+	/*height: 100%;*/
+}
+
+.container {
+	/*min-height: 100%;*/
+	position: relative;
+	width: 100%;
+}
+
+.allContent {
+	padding-top: 40px;
+	padding-bottom: 84px; /* Height of the footer */
+	width: 100%;
+}
+
+.colSideBar {
+	margin: 0px 0;
+	/*padding: 5px 5px;*/
+	margin-top: 50px;
+}
+
+.col {
+	float: left;
+	/*margin-left: 0.1em;
+            margin: 5px 0;
+            padding: 5px 5px;
+           margin-top:180px;*/
+}
+
+
+.title {
+	font: 150% Arial, Helvetica, Georgia, "Times New Roman", Times, serif;
+	color: #00b300;
+	font-weight: bold;
+	margin-top: 1.0em;
+}
+
+
+/* For the control on add new flarewiaver request form*/
+.no-wrap .aspNet-CheckBoxList label {
+	white-space: nowrap !important;
+}
+
+.no-wrap .aspNet-CheckBoxList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem; /* spacing between items */
 }
