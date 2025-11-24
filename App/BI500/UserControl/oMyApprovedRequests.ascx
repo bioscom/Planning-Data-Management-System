@@ -60,13 +60,13 @@
             </ItemTemplate>
         </asp:TemplateField>
 
-        <asp:TemplateField HeaderText="Project Champion" SortExpression="CHAMPIONFULLNAME">
+        <asp:TemplateField HeaderText="Supervisor" SortExpression="CHAMPIONFULLNAME">
             <ItemTemplate>
                 <asp:Label ID="labelChampion" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "CHAMPIONFULLNAME") %>'></asp:Label>
             </ItemTemplate>
         </asp:TemplateField>
 
-        <asp:TemplateField HeaderText="Project Sponsor" SortExpression="SPONSORFULLNAME">
+        <asp:TemplateField HeaderText="Process Owner" SortExpression="SPONSORFULLNAME">
             <ItemTemplate>
                 <asp:Label ID="lblSponsor" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "SPONSORFULLNAME") %>'></asp:Label>
             </ItemTemplate>

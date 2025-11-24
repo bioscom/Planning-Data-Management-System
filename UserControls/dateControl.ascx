@@ -2,13 +2,15 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <div>
-    <div style="float: left">
-        <asp:TextBox ID="txtDate" runat="server" BackColor="#CCCCCC"></asp:TextBox>
-    </div>
 
-    <div style="float: left">
-        <asp:ImageButton ID="imgBtnStartDate" runat="server" ImageUrl="~/Images/Calendar_scheduleHS.png"
-            ValidationGroup="yyyy" Height="40px" />
+    <div class="input-group mb-2" style="max-width: 220px;">
+        <asp:TextBox ID="txtDate" runat="server" CssClass="form-control" BackColor="#CCCCCC" Height="30px"></asp:TextBox>
+
+        <div class="">
+            <asp:ImageButton ID="imgBtnStartDate" runat="server" ImageUrl="~/Images/Calendar_scheduleHS.png" 
+                ValidationGroup="yyyy" Height="30px" />
+            <%--<asp:Image ID="imgCalendar" runat="server" ImageUrl="~/Images/Calendar_scheduleHS.png" Height="24px" />--%>
+        </div>
     </div>
 
     <ajaxToolkit:CalendarExtender ID="txtDateExt" runat="server" Enabled="True" EnableViewState="true"
